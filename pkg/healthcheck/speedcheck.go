@@ -19,7 +19,7 @@ import (
 )
 
 // SpeedTestAll tests speed of a group of proxies. Results are stored in ProxyStats
-func SpeedTestAll(proxies []proxy.Proxy) {
+func SpeedTestAll(proxies []proxy.Proxy) (cproxies []proxy.Proxy) {
 	SpeedExist = true
 	if ok := checkErrorProxies(proxies); !ok {
 		return
@@ -34,6 +34,7 @@ func SpeedTestAll(proxies []proxy.Proxy) {
 	}
 	resultCount := 0
 	m := sync.Mutex{}
+	cproxies = make(proxy.ProxyList, 0, 500)
 
 	log.Infoln("Speed Test ON")
 	log.Debugln("[speedcheck.go] connection: %d, timeout: %d", SpeedConn, SpeedTimeout)
@@ -49,6 +50,7 @@ func SpeedTestAll(proxies []proxy.Proxy) {
 			speed, err := ProxySpeedTest(pp)
 			if err == nil || speed > 0 {
 				m.Lock()
+				cproxies = append(cproxies, pp)
 				if proxyStat, ok := ProxyStats.Find(pp); ok {
 					proxyStat.UpdatePSSpeed(speed)
 				} else {
@@ -73,6 +75,7 @@ func SpeedTestAll(proxies []proxy.Proxy) {
 	pool.Release()
 	fmt.Println()
 	log.Infoln("Speed Test Done. Count all speed results: %d", resultCount)
+	return
 }
 
 // SpeedTestNew tests speed of new proxies which is not in ProxyStats. Then appended to ProxyStats

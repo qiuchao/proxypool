@@ -1,5 +1,4 @@
 # Binaries for programs and plugins
-*.exe
 *.exe~
 *.dll
 *.so
@@ -8,7 +7,6 @@ bin/*
 tmp/
 go.sum
 .vscode/
-proxypool
 __debug_bin
 
 # Test binary, build with `go test -c`

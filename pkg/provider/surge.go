@@ -3,9 +3,9 @@ package provider
 import (
 	"strings"
 
-	"github.com/ssrlive/proxypool/pkg/tool"
+	"github.com/qiuchao/proxypool/pkg/tool"
 
-	"github.com/ssrlive/proxypool/pkg/proxy"
+	"github.com/qiuchao/proxypool/pkg/proxy"
 )
 
 // Surge provides functions that make proxies support clash client

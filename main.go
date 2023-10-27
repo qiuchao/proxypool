@@ -5,14 +5,14 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/ssrlive/proxypool/config"
-	"github.com/ssrlive/proxypool/pkg/geoIp"
+	"github.com/qiuchao/proxypool/config"
+	"github.com/qiuchao/proxypool/pkg/geoIp"
 
-	"github.com/ssrlive/proxypool/api"
-	"github.com/ssrlive/proxypool/internal/app"
-	"github.com/ssrlive/proxypool/internal/cron"
-	"github.com/ssrlive/proxypool/internal/database"
-	"github.com/ssrlive/proxypool/log"
+	"github.com/qiuchao/proxypool/api"
+	"github.com/qiuchao/proxypool/internal/app"
+	"github.com/qiuchao/proxypool/internal/cron"
+	"github.com/qiuchao/proxypool/internal/database"
+	"github.com/qiuchao/proxypool/log"
 )
 
 var debugMode = false

@@ -14,8 +14,8 @@ import (
 	"github.com/Dreamacro/clash/adapter"
 	C "github.com/Dreamacro/clash/constant"
 	"github.com/ivpusic/grpool"
-	"github.com/ssrlive/proxypool/log"
-	"github.com/ssrlive/proxypool/pkg/proxy"
+	"github.com/qiuchao/proxypool/log"
+	"github.com/qiuchao/proxypool/pkg/proxy"
 )
 
 // SpeedTestAll tests speed of a group of proxies. Results are stored in ProxyStats

@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/ssrlive/proxypool/pkg/healthcheck"
+	"github.com/qiuchao/proxypool/pkg/healthcheck"
 )
 
 func TestHello(t *testing.T) {

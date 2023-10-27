@@ -5,14 +5,14 @@ import (
 	"sync"
 	"time"
 
-	C "github.com/ssrlive/proxypool/config"
-	"github.com/ssrlive/proxypool/internal/cache"
-	"github.com/ssrlive/proxypool/internal/database"
-	"github.com/ssrlive/proxypool/log"
-	"github.com/ssrlive/proxypool/pkg/geoIp"
-	"github.com/ssrlive/proxypool/pkg/healthcheck"
-	"github.com/ssrlive/proxypool/pkg/provider"
-	"github.com/ssrlive/proxypool/pkg/proxy"
+	C "github.com/qiuchao/proxypool/config"
+	"github.com/qiuchao/proxypool/internal/cache"
+	"github.com/qiuchao/proxypool/internal/database"
+	"github.com/qiuchao/proxypool/log"
+	"github.com/qiuchao/proxypool/pkg/geoIp"
+	"github.com/qiuchao/proxypool/pkg/healthcheck"
+	"github.com/qiuchao/proxypool/pkg/provider"
+	"github.com/qiuchao/proxypool/pkg/proxy"
 )
 
 var location, _ = time.LoadLocation("Asia/Shanghai")
